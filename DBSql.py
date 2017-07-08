@@ -30,7 +30,7 @@ e=create_engine("mysql+pymysql://root:123456@localhost/ppd_rjcorp?charset=utf8")
 #     # print(user)
 #     project_main.to_sql("project_main", e, if_exists="append")
 #     # break
-
+#     database operation of mysql, encoding=utf8. 
 def fetchToMysql(file,newvars, tableName):
     reader = pd.read_csv(file,encoding="utf8",low_memory=False, chunksize=100000, parse_dates=True)
     for r in reader:
