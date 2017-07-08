@@ -44,41 +44,17 @@ def fetchToMysql(file,newvars, tableName):
 dir = "~/Documents/"
 
 file = dir + "T_userinfo_main.csv"
-newvars=['MemberKey','Gender','Age','SocialStatus','BorrowCredit',
-'LendCredit',
-'RegisterTime',
-'ApprovalTime',
-'CummuBids',
-'BadLoanPercent',
-'WeightedBidRate',
-'UpdateTime',
-'BorrowScore_TotalBorrowCredit',
-'BorrowScore_IDVerification',
-'BorrowScore_VideoVerification',
-'BorrowScore_DiplomaVerification',
-'BorrowScore_PhoneVerification',
-'BorrowScore_BankCharge',
-'Score_InviteFriends',
-'Score_FullyRepaid',
-'FullyRepaidTimes',
-'Score_DelayGreaterThan15D',
-'DelayTimesGreaterThan15D',
-'Score_PersonInfo',
-'Lend_Score',
-'LendScore_IDVerification',
-'LendScore_VideoVerification',
-'LendScore_DiplomaVerification',
-'LendScore_PhoneVerification',
-'Times_SuccessBids',
-'LendScore_SuccessBids',
-'Times_FullyRepaid',
-'LendScore_FullyRepaidTimes',
-'Times_PrincipalRepaid',
-'LendScore_PrincipalRepaid',
-'Times_DelayThan90D',
-'Score_DelayThan90D',
-'CollectionTime'
-    ]
+newvars=['MemberKey','Gender','Age','SocialStatus','BorrowCredit','LendCredit','RegisterTime',\
+         'ApprovalTime','CummuBids','BadLoanPercent','WeightedBidRate','UpdateTime',\
+         'BorrowScore_TotalBorrowCredit','BorrowScore_IDVerification','BorrowScore_VideoVerification',\
+         'BorrowScore_DiplomaVerification','BorrowScore_PhoneVerification',\     
+         'BorrowScore_BankCharge','Score_InviteFriends','Score_FullyRepaid',\
+         'FullyRepaidTimes','Score_DelayGreaterThan15D','DelayTimesGreaterThan15D',\
+         'Score_PersonInfo','Lend_Score','LendScore_IDVerification','LendScore_VideoVerification',\
+         'LendScore_DiplomaVerification','LendScore_PhoneVerification','Times_SuccessBids',\
+         'LendScore_SuccessBids','Times_FullyRepaid','LendScore_FullyRepaidTimes',\
+         'Times_PrincipalRepaid','LendScore_PrincipalRepaid','Times_DelayThan90D',\
+         'Score_DelayThan90D','CollectionTime']
 
 tablename= "users_main"
 fetchToMysql(file,newvars,tablename)
