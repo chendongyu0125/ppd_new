@@ -43,91 +43,125 @@ def fetchToMysql(file,newvars, tableName):
 
 dir = "~/Documents/"
 
+file = dir + "T_userinfo_main.csv"
+newvars=['MemberKey','Gender','Age','SocialStatus','BorrowCredit',
+'LendCredit',
+'RegisterTime',
+'ApprovalTime',
+'CummuBids',
+'BadLoanPercent',
+'WeightedBidRate',
+'UpdateTime',
+'BorrowScore_TotalBorrowCredit',
+'BorrowScore_IDVerification',
+'BorrowScore_VideoVerification',
+'BorrowScore_DiplomaVerification',
+'BorrowScore_PhoneVerification',
+'BorrowScore_BankCharge',
+'Score_InviteFriends',
+'Score_FullyRepaid',
+'FullyRepaidTimes',
+'Score_DelayGreaterThan15D',
+'DelayTimesGreaterThan15D',
+'Score_PersonInfo',
+'Lend_Score',
+'LendScore_IDVerification',
+'LendScore_VideoVerification',
+'LendScore_DiplomaVerification',
+'LendScore_PhoneVerification',
+'Times_SuccessBids',
+'LendScore_SuccessBids',
+'Times_FullyRepaid',
+'LendScore_FullyRepaidTimes',
+'Times_PrincipalRepaid',
+'LendScore_PrincipalRepaid',
+'Times_DelayThan90D',
+'Score_DelayThan90D',
+'CollectionTime'
+    ]
 
-file = dir + "T_project_user_info.csv"
-newvars=['MemberKey', 'ListingKey', 'UserName', \
-         'LoanPurpose', 'Gender', 'Age', 'Marriage', \
-         'Education', 'HouseOwnership', \
-         'CarOwnership', 'CollectionTime']
-tablename="users"
+tablename= "users_main"
 fetchToMysql(file,newvars,tablename)
-print("table 3 success")
-# file = dir + "T_userinfo_main.csv"
+
+print("table 5 success")
+
+
+# file = dir + "T_project_user_info.csv"
 # newvars=['MemberKey', 'ListingKey', 'UserName', \
 #          'LoanPurpose', 'Gender', 'Age', 'Marriage', \
 #          'Education', 'HouseOwnership', \
 #          'CarOwnership', 'CollectionTime']
-# tablename= "users_main"
+# tablename="users"
 # fetchToMysql(file,newvars,tablename)
-#
-# print("table 5 success")
+# print("table 3 success")
 
 
-file= dir + "T_project_bid.csv"
-newvars=['ID', 'ListingKey', 'BorrowerName',\
-         'LoaningProjectName',\
-         'Bidder',\
-         'BidderURL',\
-         'BidType',\
-         'InterestRate',\
-         'BiddingAmount',\
-         'BiddingTime',\
-         'CollectionTime'\
-         ]
-tablename="biddings"
-fetchToMysql(file,newvars,tablename)
 
-print("table 1 success")
+# file= dir + "T_project_bid.csv"
+# newvars=['ID', 'ListingKey', 'BorrowerName',\
+#          'LoaningProjectName',\
+#          'Bidder',\
+#          'BidderURL',\
+#          'BidType',\
+#          'InterestRate',\
+#          'BiddingAmount',\
+#          'BiddingTime',\
+#          'CollectionTime'\
+#          ]
+# tablename="biddings"
+# fetchToMysql(file,newvars,tablename)
 
-file = dir+ "T_project_main.csv"
-newvars=['ID','ListingKey','ProjectName','SecurityMark','CreditGrade',\
-         'BorrowerName','Historical_SuccLoanTimes','Historical_FailedBidTimes',\
-         'AmountRequested','BorrowerRate','Term','RepaymentType','FundingProgress',\
-         'BiddersNumber','RemainingTime','EndTime','Status','Balance',\
-         'HukouVerification','DiplomaVerification','CreditVerification',\
-         'Description','RayoffTimes','DelayTimesLessThan15D','DelayTimesGreaterThan15D',\
-         'TotalAmountRequested','TotalAmountToBePaied','TotalAmountToBeCollected',\
-         'BorrowerFirstSuccessLoanTime','RegisterTime','CollectionTime']
-# newvars=['ID','ListingKey','ProjectName','SecurityMark','CreditGrade','BorrowerName', \
-#          'Historical_SuccLoanTimes','AmountRequested','BorrowerRate','Term', \
-#          'RepaymentType','FundingProgress','BiddersNumber','RemainingTime','EndTime', \
-#          'Status','Balance','HukouVerification','DiplomaVerification','CreditVerification', \
-#          'Description','RayoffTimes','DelayTimesLessThan15D','DelayTimesGreaterThan15D', \
-#          'TotalAmountRequested','TotalAmountToBePaied','TotalAmountToBeCollected', \
+# print("table 1 success")
+
+# file = dir+ "T_project_main.csv"
+# newvars=['ID','ListingKey','ProjectName','SecurityMark','CreditGrade',\
+#          'BorrowerName','Historical_SuccLoanTimes','Historical_FailedBidTimes',\
+#          'AmountRequested','BorrowerRate','Term','RepaymentType','FundingProgress',\
+#          'BiddersNumber','RemainingTime','EndTime','Status','Balance',\
+#          'HukouVerification','DiplomaVerification','CreditVerification',\
+#          'Description','RayoffTimes','DelayTimesLessThan15D','DelayTimesGreaterThan15D',\
+#          'TotalAmountRequested','TotalAmountToBePaied','TotalAmountToBeCollected',\
 #          'BorrowerFirstSuccessLoanTime','RegisterTime','CollectionTime']
+# # newvars=['ID','ListingKey','ProjectName','SecurityMark','CreditGrade','BorrowerName', \
+# #          'Historical_SuccLoanTimes','AmountRequested','BorrowerRate','Term', \
+# #          'RepaymentType','FundingProgress','BiddersNumber','RemainingTime','EndTime', \
+# #          'Status','Balance','HukouVerification','DiplomaVerification','CreditVerification', \
+# #          'Description','RayoffTimes','DelayTimesLessThan15D','DelayTimesGreaterThan15D', \
+# #          'TotalAmountRequested','TotalAmountToBePaied','TotalAmountToBeCollected', \
+# #          'BorrowerFirstSuccessLoanTime','RegisterTime','CollectionTime']
 
-# ['id', 'pid', 'xmmc', 'aqbj', 'mjdj', 'jkyhm', 'cgcs', 'lbcs', 'jkze',
-#        'jknll', 'jkqx', 'hkfs', 'jkjd', 'tbrs', 'sysj', 'jssj', 'xmzt', 'jkye',
-#        'hkrz', 'xlrz', 'zxrz', 'jkxq', 'jkzchqcs', 'xyhqcs', 'dyhqcs',
-#        'gjjrje', 'dhjrje', 'dstzje', 'dycjksj', 'zcsj', 'addtime']
+# # ['id', 'pid', 'xmmc', 'aqbj', 'mjdj', 'jkyhm', 'cgcs', 'lbcs', 'jkze',
+# #        'jknll', 'jkqx', 'hkfs', 'jkjd', 'tbrs', 'sysj', 'jssj', 'xmzt', 'jkye',
+# #        'hkrz', 'xlrz', 'zxrz', 'jkxq', 'jkzchqcs', 'xyhqcs', 'dyhqcs',
+# #        'gjjrje', 'dhjrje', 'dstzje', 'dycjksj', 'zcsj', 'addtime']
 
-tablename = "listings"
-fetchToMysql(file,newvars,tablename)
-print("table 2 success")
-
-
-
-
-
-
-file = dir + "T_project_approvalinfo.csv"
-newvars= ['ID','ListingKey','BorrowerName','AuditProject', \
-          'AuditStatus','ApprovalTime','CollectionTime']
-tablename= "project_approvals"
-fetchToMysql(file,newvars,tablename)
-print("table 4 success")
-
-# file= dir + "T_userinfo_jklb.csv"
-# newvars=
-# tablename= "userinfo_jklb"
+# tablename = "listings"
 # fetchToMysql(file,newvars,tablename)
+# print("table 2 success")
 
 
 
-file= dir + "T_project_sixmonth.csv"
-newvars=[ 'ID',  'ListingKey', 'BorrowerName',\
-          'RepaymentDate','RepaymentTimes', \
-          'RepaymentAmount','CollectionTime']
-tablename="project_sixmonth"
-fetchToMysql(file,newvars,tablename)
-print("table 6 success")
+
+
+
+# file = dir + "T_project_approvalinfo.csv"
+# newvars= ['ID','ListingKey','BorrowerName','AuditProject', \
+#           'AuditStatus','ApprovalTime','CollectionTime']
+# tablename= "project_approvals"
+# fetchToMysql(file,newvars,tablename)
+# print("table 4 success")
+
+# # file= dir + "T_userinfo_jklb.csv"
+# # newvars=
+# # tablename= "userinfo_jklb"
+# # fetchToMysql(file,newvars,tablename)
+
+
+
+# file= dir + "T_project_sixmonth.csv"
+# newvars=[ 'ID',  'ListingKey', 'BorrowerName',\
+#           'RepaymentDate','RepaymentTimes', \
+#           'RepaymentAmount','CollectionTime']
+# tablename="project_sixmonth"
+# fetchToMysql(file,newvars,tablename)
+# print("table 6 success")
